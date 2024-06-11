@@ -88,7 +88,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 
 Client -> Server	    Initialization 报文，Type=1 
 
-```sh
+```bash
 |  	Type   | 		N	 	    |      
 | 2 Bytes  | 	4 Bytes  	|
 ```
