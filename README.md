@@ -13,6 +13,7 @@
 - [使用方法](#使用方法)
   - [服务器](#服务器)
   - [客户端](#客户端)
+- [报文格式](#报文格式)
 
 ## 概述
 
@@ -88,7 +89,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 Client -> Server	    Initialization 报文，Type=1 
 
 ```sh
-|  	Type   | 		N	 	|      
+|  	Type   | 		N	 	    |      
 | 2 Bytes  | 	4 Bytes  	|
 ```
 
@@ -102,14 +103,14 @@ Server -> Client	    agree 报文，Type=2
 Client -> Server	    reverseRequest 报文，Type=3
 
 ```
-|  	Type   | 		N	 	|      	Data				|
+|  	Type   | 		N	     	|        	Data			  	|
 | 2 Bytes  | 	4 Bytes  	|
 ```
 
 Server -> Client	    reverseAnswer 报文，Type=4
 
 ```
-|  	Type   | 		N	 	|      reverseData			|
+|  	Type   | 		N	 	    |      reverseData			|
 | 2 Bytes  | 	4 Bytes  	|
 ```
 
