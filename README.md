@@ -90,9 +90,9 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 ### Client -> Server	    Initialization 报文，Type=1 
 
 ```sh
-|   Type   |         N       |
-|----------|-----------------|
-| 2 Bytes  | 	  4 Bytes    |
+|   Type     |         N       |
+  |----------|-----------------|
+| 2 Bytes    | 	  4 Bytes      |
 ```
 
 ### Server -> Client	    agree 报文，Type=2
@@ -105,15 +105,17 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 
 ### Client -> Server	    reverseRequest 报文，Type=3
 
-```
-|  	Type   | 		N	 	|      	Data				|
-| 2 Bytes  | 	4 Bytes  	|
+```sh
+|  	Type   | 		 Length	     |          Data			       |
+|----------|-----------------|---------------------------|
+| 2 Bytes  |   	4 Bytes      |                           |
 ```
 
 ### Server -> Client	    reverseAnswer 报文，Type=4
 
-```
-|  	Type   | 		N	 	|      reverseData			|
-| 2 Bytes  | 	4 Bytes  	|
+```sh
+|  	Type   | 		 Length	     |      reverseData			     |
+|----------|-----------------|---------------------------|
+| 2 Bytes  |   	4 Bytes      |                           |
 ```
 
