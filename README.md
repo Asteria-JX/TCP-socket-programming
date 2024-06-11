@@ -91,7 +91,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 
 ```sh
 |   Type     |         N       |
-  |----------|-----------------|
+|------------|-----------------|
 | 2 Bytes    | 	  4 Bytes      |
 ```
 
@@ -106,7 +106,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 ### Client -> Server	    reverseRequest 报文，Type=3
 
 ```sh
-|  	Type   | 		 Length	     |          Data			       |
+|  	Type   | 		 Length	   |          Data			    |
 |----------|-----------------|---------------------------|
 | 2 Bytes  |   	4 Bytes      |                           |
 ```
