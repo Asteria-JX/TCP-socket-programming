@@ -62,6 +62,8 @@ cd TCP-socket-programming
 ```
 
 3.安装所需的包
+确保安装了 Python 3.x 和 pip。
+可能需要安装的依赖包括但不限于 socket, json, select, threading, concurrent.futures 等，这些通常是 Python 标准库的一部分，不需要额外安装。
 
 ## 使用方法
 
@@ -98,24 +100,24 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 ### Server -> Client	    agree 报文，Type=2
 
 ```sh
-|  Tyepe  |
-|---------|
-|  2 Bytes|
+|    Type   |
+|-----------|
+|  2 Bytes  |
 ```
 
 ### Client -> Server	    reverseRequest 报文，Type=3
 
 ```sh
-|  Tyepe  |    Length    |        Data        |
-|---------|--------------|--------------------|
-|  2 Bytes|  4 Bytes     |                    |
+|    Type   |    Length    |          Data          |
+|-----------|--------------|------------------------|
+|  2 Bytes  |  4 Bytes     |                        |
 ```
 
 ### Server -> Client	    reverseAnswer 报文，Type=4
 
 ```sh
-|  Tyepe  |    Length    |      reverseData      |
-|---------|--------------|-----------------------|
-|  2 Bytes|  4 Bytes     |                       |
+|    Type   |    Length    |      reverseData        |
+|-----------|--------------|-------------------------|
+|  2 Bytes  |  4 Bytes     |                         |
 ```
 
