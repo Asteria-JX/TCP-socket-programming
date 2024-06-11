@@ -90,7 +90,7 @@ Client -> Server	    Initialization 报文，Type=1
 
 ```bash
 |  	Type   | 		N	 	    |      
-| 2 Bytes  | 	4 Bytes  	|
+|   2 Bytes  | 	4 Bytes  	|
 ```
 
 Server -> Client	    agree 报文，Type=2
