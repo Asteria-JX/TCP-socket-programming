@@ -82,4 +82,36 @@ python tcpserver.py
 python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 ```
 
-客户端将连接到服务器，发送指定文件的段落，接收反转后的段落，并将其保存到reversed_content.txt`。
+客户端将连接到服务器，发送指定文件的段落，接收反转后的段落，并将其保存到reversed_content.txt。
+## 报文格式
+
+Client -> Server	    Initialization 报文，Type=1 
+
+```sh
+|  	Type   | 		N	 	|      
+| 2 Bytes  | 	4 Bytes  	|
+```
+
+Server -> Client	    agree 报文，Type=2
+
+```
+|  	Type   | 	  
+| 2 Bytes  | 	
+```
+
+Client -> Server	    reverseRequest 报文，Type=3
+
+```
+|  	Type   | 		N	 	|      	Data				|
+| 2 Bytes  | 	4 Bytes  	|
+```
+
+Server -> Client	    reverseAnswer 报文，Type=4
+
+```
+|  	Type   | 		N	 	|      reverseData			|
+| 2 Bytes  | 	4 Bytes  	|
+```
+
+
+
