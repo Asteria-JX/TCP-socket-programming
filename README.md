@@ -49,19 +49,19 @@
 
 ### 安装
 
-1.克隆仓库：
+#### 1.克隆仓库：
 
 ```sh
 git clone https://github.com/Asteria-JX/TCP-socket-programming.git
 ```
 
-2.进入项目目录：
+#### 2.进入项目目录：
 
 ```
 cd TCP-socket-programming
 ```
 
-3.安装所需的包
+#### 3.安装所需的包
 确保安装了 Python 3.x 和 pip。
 可能需要安装的依赖包括但不限于 socket, json, select, threading, concurrent.futures 等，这些通常是 Python 标准库的一部分，不需要额外安装。
 
@@ -89,7 +89,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 
 ## 报文格式
 
-### Client -> Server	    Initialization 报文，Type=1 
+### Client -> Server	     --Initialization 报文，Type=1 
 
 ```sh
 |   Type     |         N       |
@@ -97,7 +97,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 | 2 Bytes    | 	  4 Bytes      |
 ```
 
-### Server -> Client	    agree 报文，Type=2
+### Server -> Client	    --agree 报文，Type=2
 
 ```sh
 |    Type   |
@@ -105,7 +105,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 |  2 Bytes  |
 ```
 
-### Client -> Server	    reverseRequest 报文，Type=3
+### Client -> Server	    --reverseRequest 报文，Type=3
 
 ```sh
 |    Type   |    Length    |          Data          |
@@ -113,7 +113,7 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 |  2 Bytes  |  4 Bytes     |                        |
 ```
 
-### Server -> Client	    reverseAnswer 报文，Type=4
+### Server -> Client	    --reverseAnswer 报文，Type=4
 
 ```sh
 |    Type   |    Length    |      reverseData        |
