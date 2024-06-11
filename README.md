@@ -87,29 +87,29 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 
 ## 报文格式
 
-Client -> Server	    Initialization 报文，Type=1 
+### Client -> Server	    Initialization 报文，Type=1 
 
 ```sh
 |   Type   |         N       |
 |----------|-----------------|
-| 2 Bytes  | 	  4 Bytes      |
+| 2 Bytes  | 	  4 Bytes     |
 ```
 
-Server -> Client	    agree 报文，Type=2
+### Server -> Client	    agree 报文，Type=2
 
 ```
 |  	Type   | 	  
 | 2 Bytes  | 	
 ```
 
-Client -> Server	    reverseRequest 报文，Type=3
+### Client -> Server	    reverseRequest 报文，Type=3
 
 ```
 |  	Type   | 		N	 	|      	Data				|
 | 2 Bytes  | 	4 Bytes  	|
 ```
 
-Server -> Client	    reverseAnswer 报文，Type=4
+### Server -> Client	    reverseAnswer 报文，Type=4
 
 ```
 |  	Type   | 		N	 	|      reverseData			|
