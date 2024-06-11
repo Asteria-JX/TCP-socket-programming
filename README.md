@@ -92,14 +92,14 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 ```sh
 |   Type   |         N       |
 |----------|-----------------|
-| 2 Bytes  | 	  4 Bytes     |
+| 2 Bytes  | 	  4 Bytes    |
 ```
 
 ### Server -> Client	    agree 报文，Type=2
 
 ```
 |  	Type   | 	  
-| 2 Bytes  | 	
+|  2 Bytes  | 	
 ```
 
 ### Client -> Server	    reverseRequest 报文，Type=3
