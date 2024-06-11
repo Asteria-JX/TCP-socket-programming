@@ -98,24 +98,24 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 ### Server -> Client	    agree 报文，Type=2
 
 ```sh
-|   Type   	|
-|-----------|
-| 2 Bytes  	|
+|  Tyepe  |
+|---------|
+|  2 Bytes|
 ```
 
 ### Client -> Server	    reverseRequest 报文，Type=3
 
 ```sh
-|  	Type   | 		 Length	   |          Data			    |
-|----------|-----------------|---------------------------|
-| 2 Bytes  |   	4 Bytes      |                           |
+|  Tyepe  |    Length    |        Data        |
+|---------|--------------|--------------------|
+|  2 Bytes|  4 Bytes     |                    |
 ```
 
 ### Server -> Client	    reverseAnswer 报文，Type=4
 
 ```sh
-|  	Type   | 		 Length	     |      reverseData			     |
-|----------|-----------------|---------------------------|
-| 2 Bytes  |   	4 Bytes      |                           |
+|  Tyepe  |    Length    |      reverseData      |
+|---------|--------------|-----------------------|
+|  2 Bytes|  4 Bytes     |                       |
 ```
 
