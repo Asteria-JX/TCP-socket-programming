@@ -89,8 +89,8 @@ python tcpclient.py <服务器IP> <服务器端口> <文件路径> <Lmin> <Lmax>
 Client -> Server	    Initialization 报文，Type=1 
 
 ```bash
-|  	Type   | 		N	 	    |      
-|   2 Bytes  | 	4 Bytes  	|
+| Seq_no   | Ver | Type | Src_Port | Dst_Port | Time  |        content
+| 2 Bytes  | 1B  | 16B  |    8B    |    8B    |  32B  |
 ```
 
 Server -> Client	    agree 报文，Type=2
